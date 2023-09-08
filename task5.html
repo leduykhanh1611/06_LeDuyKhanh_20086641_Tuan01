@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Challenge #5</title>
+</head>
+
+<body>
+    <script>
+        // Tạo hàm calcAverage tính điểm trung bình
+        const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+        // Data 1
+        const dolphinsScore1 = 44;
+        const dolphinsScore2 = 23;
+        const dolphinsScore3 = 71;
+
+        const koalasScore1 = 65;
+        const koalasScore2 = 54;
+        const koalasScore3 = 49;
+
+        const avgDolphins1 = calcAverage(dolphinsScore1, dolphinsScore2, dolphinsScore3);
+        const avgKoalas1 = calcAverage(koalasScore1, koalasScore2, koalasScore3);
+
+        // Data 2
+        const dolphinsScore4 = 85;
+        const dolphinsScore5 = 54;
+        const dolphinsScore6 = 41;
+
+        const koalasScore4 = 23;
+        const koalasScore5 = 34;
+        const koalasScore6 = 27;
+
+        const avgDolphins2 = calcAverage(dolphinsScore4, dolphinsScore5, dolphinsScore6);
+        const avgKoalas2 = calcAverage(koalasScore4, koalasScore5, koalasScore6);
+        // Hàm tìm đội thắng
+        const checkWinner = (avgDolphins, avgKoalas) => {
+            if (avgDolphins >= 2 * avgKoalas) {
+                console.log("Dolphins thắng " +avgDolphins+" vs. "+ avgKoalas);
+            } else if (avgKoalas >= 2 * avgDolphins) {
+                console.log("Koalas thắng "+avgKoalas+ " vs." +avgDolphins);
+            } else {
+                console.log("Không đội nào thắng");
+            }
+        };
+
+        checkWinner(avgDolphins1, avgKoalas1);
+
+        checkWinner(avgDolphins2, avgKoalas2);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Hàm calcTip tính tiền bo từ hóa đơn
+        function calcTip(bill) {
+            return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+        }
+
+        // Test data
+        const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+        // Mảnh lưu giá trị tiền bo và tổng tiền
+        const tips = [];
+        const totals = [];
+
+        // Tính tiền bo và tổng tiền bằng vòng lặp
+        
+        for (let i = 0; i < bills.length; i++) {
+            const tip = calcTip(bills[i]);
+            tips.push(tip);
+            totals.push(bills[i] + tip);
+        }
+
+        console.log("Hóa đơn:", bills);
+        console.log("Tiền bo:", tips);
+        console.log("Tổng tiền:", totals);
+
+        // Hàm calcAverage tính trung bình giá trị trong mảng
+        function calcAverage(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum / arr.length;
+        }
+
+        // Tổng tiền trung bình
+        const averageTotal = calcAverage(totals);
+        console.log("Tổng tiền trung bình là:", averageTotal);
+
+
+    </script>
+</body>
+
+</html>

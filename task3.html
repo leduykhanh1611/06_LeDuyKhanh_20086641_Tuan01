@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Challenge #3</title>
+</head>
+
+<body>
+    <script>
+        // Test data 1
+        var dolphinsScores = [96, 108, 89];
+        var koalasScores = [88, 91, 110];
+
+        // Test data 2
+        var dolphinsScores2 = [97, 112, 101];
+        var koalasScores2 = [109, 95, 123];
+
+        // Test data 3
+        var dolphinsScores3 = [97, 112, 101];
+        var koalasScores3 = [109, 95, 106];
+
+        // Tính điểm trung bình mỗi đội
+        //data 1
+        var dolphinsAverage = (dolphinsScores[0] + dolphinsScores[1] + dolphinsScores[2]) / 3;
+        var koalasAverage = (koalasScores[0] + koalasScores[1] + koalasScores[2]) / 3;
+        //data 2
+        var dolphinsAverage2 = (dolphinsScores2[0] + dolphinsScores2[1] + dolphinsScores2[2]) / 3;
+        var koalasAverage2 = (koalasScores2[0] + koalasScores2[1] + koalasScores2[2]) / 3;
+        //data3
+        var dolphinsAverage3 = (dolphinsScores3[0] + dolphinsScores3[1] + dolphinsScores3[2]) / 3;
+        var koalasAverage3 = (koalasScores3[0] + koalasScores3[1] + koalasScores3[2]) / 3;
+        function checkScore(dolphinsAverage, koalasAverage) {
+            // Điểm tối thiểu là 100
+            var minScore = 100;
+
+            if (dolphinsAverage >= minScore && koalasAverage >= minScore) {
+                // So sánh điểm trung bình để tìm đội thắng
+                if (dolphinsAverage > koalasAverage) {
+                    console.log("Dolphins win with an average score of " + dolphinsAverage.toFixed(1));
+                } else if (koalasAverage > dolphinsAverage) {
+                    console.log("Koalas win with an average score of " + koalasAverage.toFixed(1));
+                } else {
+                    console.log("It's a draw with an average score of " + dolphinsAverage.toFixed(1));
+                }
+            } else {
+                console.log("No team wins the trophy as both teams must have a score of at least 100.");
+            }
+
+            // Bonus 2: Trường hợp đủ 100 và hai đội hòa nhau
+            if (dolphinsAverage === koalasAverage && dolphinsAverage >= minScore && koalasAverage >= minScore) {
+                console.log("It's a draw, but both teams must have a score of at least 100 to win the trophy.");
+            }
+
+
+
+        }
+        console.log("Data 1:"); checkScore(dolphinsAverage, koalasAverage);
+        console.log("Data 2:"); checkScore(dolphinsAverage2, koalasAverage2);
+        console.log("Data 1:"); checkScore(dolphinsAverage3, koalasAverage3);
+
+    </script>
+</body>
+
+</html>

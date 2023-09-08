@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Challenge #4</title>
+</head>
+
+<body>
+    <script>
+        // Test data
+        var bill1 = 275;
+        var bill2 = 40;
+        var bill3 = 430;
+
+        // Tính tiền bo bằng toán tử 3 ngôi
+        var tip1 = (bill1 >= 50 && bill1 <= 300) ? bill1 * 0.15 : bill1 * 0.2;
+        var tip2 = (bill2 >= 50 && bill2 <= 300) ? bill2 * 0.15 : bill2 * 0.2;
+        var tip3 = (bill3 >= 50 && bill3 <= 300) ? bill3 * 0.15 : bill3 * 0.2;
+
+        // Tổng bill
+        var total1 = bill1 + tip1;
+        var total2 = bill2 + tip2;
+        var total3 = bill3 + tip3;
+
+        console.log("Hóa đơn là " +bill1.toFixed(1)+", tiền bo là "+ tip1.toFixed(1) +" và tổng giá trị "+ total1.toFixed(1));
+        console.log("Hóa đơn là " +bill2.toFixed(1)+"  tiền bo là "+ tip2.toFixed(1) +" và tổng giá trị "+ total2.toFixed(1));
+        console.log("Hóa đơn là " +bill3.toFixed(1)+"  tiền bo là "+ tip3.toFixed(1) +"và tổng giá trị "+ total3.toFixed(1));
+
+
+
+    </script>
+</body>
+
+</html>
